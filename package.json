@@ -9,7 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev":"parcel src/html/index.html --open",
+    "build":"parcel build src/html/index.html "
   },
   "keywords": [],
   "author": "",
