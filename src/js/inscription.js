@@ -1,7 +1,4 @@
 let qrcode = document.querySelector("#qrcode");
-function generateQrcode(){
-    new QRCode(qrcode,);
-}
 
 // variable que l'on recupere
 let valueFormation = document.querySelector("#formation");
@@ -93,6 +90,7 @@ let estRdvOuAutre = true;
       .then(function (response) {
         console.log(response);
         let id = response.data.name;
+        generateQrcode(id);
       })
       .catch(function (error) {
         console.log(error);
@@ -100,4 +98,7 @@ let estRdvOuAutre = true;
 }
 listInput[3].addEventListener("click",envoyerDonne);
 
+function generateQrcode(id){
+    new QRCode(qrcode,id);
+}
 // ---------------------------------------------------------------------------------------------------------//
