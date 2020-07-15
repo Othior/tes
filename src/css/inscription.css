@@ -1,0 +1,9 @@
+.formationBlock{
+    display: none;
+}
+.personnelBlock{
+    display: none;
+}
+.active{
+    display: block;
+}
