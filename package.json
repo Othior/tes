@@ -5,7 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "axios": "^0.19.2",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "qrcode": "^1.4.4",
+    "webcam-easy": "^1.0.5"
   },
   "devDependencies": {},
   "scripts": {

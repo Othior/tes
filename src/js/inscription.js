@@ -1,3 +1,8 @@
+let qrcode = document.querySelector("#qrcode");
+function generateQrcode(){
+    new QRCode(qrcode,);
+}
+
 // variable que l'on recupere
 let valueFormation = document.querySelector("#formation");
 let valuePersonnel = document.querySelector("#personnel");
@@ -69,7 +74,7 @@ let estRdvOuAutre = true;
     
     // ---------------------------------------------------------------------------------------------------------//
     // --------------------------------------------- POST ------------------------------------------------------//
-    
+
     function envoyerDonne(){
         let url = "https://exerciceintegre.firebaseio.com/Visiteur.json";
         console.log(perso);
@@ -87,6 +92,7 @@ let estRdvOuAutre = true;
       })
       .then(function (response) {
         console.log(response);
+        let id = response.data.name;
       })
       .catch(function (error) {
         console.log(error);
@@ -94,4 +100,4 @@ let estRdvOuAutre = true;
 }
 listInput[3].addEventListener("click",envoyerDonne);
 
-// ---------------------------------------------------------------------------------------------------------// 
+// ---------------------------------------------------------------------------------------------------------//
