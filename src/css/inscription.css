@@ -53,3 +53,6 @@
 .page{
     height: 100vh;
 }
+.messageNom,.messagePrenom,.messageMail{
+    color: red;
+}
