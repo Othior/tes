@@ -111,19 +111,4 @@ listInput[3].addEventListener("click",envoyerDonne);
 function generateQrcode(id){
     new QRCode(qrcode,id);
 }
-// ---------------------------------------------------------------------------------------------------------//
-//     console.log(stream.getVideoTracks())
-//      let cam = navigator.mediaDevices.getUserMedia({ audio: false, video:{ width: 200, height: 200 } }).then(function(video){
-//     console.log("yes :",window.stream);
-//     video.captureStream(30);
-//     document.querySelector(".PrendrePhoto").addEventListener('click', async (e) => {
-//         const stream = await navigator.mediaDevices.getUserMedia({
-//           video: true
-//         })
-//         document.querySelector('#video').srcObject = stream ;
-//       })
-//     console.log("ca marche");
-// }).catch(function(err){
-//     console.log("dommage");
-// });
-// console.log(cam);
+
