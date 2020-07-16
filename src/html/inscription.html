@@ -8,15 +8,15 @@
     <title>Inscription</title>
 </head>
 <body>
-    <div class="container-fluid bg-light" style="height: 100vh;">
+    <div class="container-fluid bg-light page" >
         <div class="jumbotron bg-dark text-center text-warning">
             <h1>Cepegra</h1>
-            <h2 style="padding-top: 2rem;">Inscription</h2>
+            <h2 class="inscriptionTitle">Inscription</h2>
+        </div>
+        <div class="btnAcceuil text-center">
+            <a class="btn btn-warning btn-lg" href="../../index.html">Acceuil</a>
         </div>
         <div class="container yes">
-            <div class="btnAcceuil text-center">
-                <a class="btn btn-warning btn-lg" href="../../index.html">Acceuil</a>
-            </div>
             <div class="row"></div>
             <div class="form-group">
                 <label for="nom">Nom:</label>
@@ -33,14 +33,14 @@
               <div class="jumbotron bg-dark text-center text-warning">
                 <h2>Qu'elle est l'objet de votre visite ?</h2>
             </div> 
-            <div class="rdv" style="padding-top: 1rem;">
+            <div class="rdv">
                 <select class="form-control" id="rdv" name="rdv">
                     <option data-id="0" selected="selected">Choix de votre visite</option>
                     <option data-id="1">Suivre une formation</option>
                     <option data-id="2">Rendez vous avec un membre du personnel</option>
                 </select>
             </div>
-            <div class="groupInput" style="padding-top: 2rem;">
+            <div class="groupInput">
                 <div class="formationBlock">
                     <select class="form-control" id="formation" name="formation">
                     </select>
@@ -50,12 +50,12 @@
                     </select>
                 </div>
             </div>
-            <div class="bouton text-center" style="padding-top: 1rem;">
+            <div class="bouton text-center">
                 <input class=" btn btn-lg btn btn-warning btnSubmit" type="submit" value="Envoyer">
             </div>
         </div>
-            <div class="container bg-dark text-center qrcodeBlock" style="margin-top: 3rem;">
-                <div class="text-warning text-center" style="padding-top: 2rem; padding-bottom:4rem ;">
+            <div class="container bg-dark text-center qrcodeBlock">
+                <div class="text-warning text-center yes">
                     <h2>Voici votre QRCODE :</h2>
                     <div id="qrcode"></div>
                 </div>

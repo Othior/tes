@@ -1,7 +1,6 @@
 .formationBlock,.personnelBlock{
     display: none;
 }
-
 .active,.container{
     display: block;
 }
@@ -31,4 +30,26 @@
     width: 200px;
     height: 200px;
     background-color: grey;
+}
+.btnAcceuil{
+    margin-bottom: 3rem;
+}
+.rdv{
+    padding-top: 1rem;
+}
+.groupInput{
+    padding-top: 2rem;
+}
+.bouton{
+    padding-top: 1rem;
+}
+.yes{
+    padding-top: 2rem; 
+    padding-bottom:4rem;
+}
+.inscriptionTitle{
+    padding-top: 2rem;
+}
+.page{
+    height: 100vh;
 }
