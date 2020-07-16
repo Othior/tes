@@ -13,13 +13,14 @@ let listInput = [
     document.querySelector("#mail"),
     document.querySelector(".btnSubmit")
 ];
+
 let dateMtn = new Date();
 let perso = null;
 let estRdvOuAutre = true;
 
 //------------------------------------------------- GET -----------------------------------------------------//
     // recupere les donnees de l'api des formations
-    axios.get('http://localhost/exoIntegre/wordpress/wp-json/wp/v2/formation')
+    axios.get('https://cepegra-frontend.xyz/marvyn/wp-json/acf/v3/formation')
     .then((response) => {
 
         let formation = response.data;
@@ -36,7 +37,7 @@ let estRdvOuAutre = true;
     });  
 
     // recupere les donnees de l'api du personnel
-    axios.get('http://localhost/exoIntegre/wordpress/wp-json/wp/v2/addpersonnel')
+    axios.get('https://cepegra-frontend.xyz/marvyn/wp-json/acf/v3/addpersonnel')
     .then((response) => {
     let personnel = response.data;
     personnel.forEach(element => {
@@ -75,19 +76,18 @@ let estRdvOuAutre = true;
     function envoyerDonne(){
         let url = "https://exerciceintegre.firebaseio.com/Visiteur.json";
         console.log("perso : ",perso);
-    axios.post(url, {
+        axios.post(url, {
         Nom : listInput[0].value ,
         Prenom : listInput[1].value ,
         Mail : listInput[2].value ,
         derniereVisite :` ${dateMtn.getFullYear()} - ${dateMtn.getMonth()+1} -  ${dateMtn.getDate()}`,
         avatar: "",
         Visite : [
-        {
-            nomVisite :` rdv `,
-            Personnel : ``,
-            Formation : "",
-        }
-    ]
+            {
+                nomVisite :` rdv `,
+                Objet : ""
+            }
+        ]
       })
       .then(function (response) {
         console.log(response);
@@ -111,4 +111,15 @@ listInput[3].addEventListener("click",envoyerDonne);
 function generateQrcode(id){
     new QRCode(qrcode,id);
 }
+
+axios.get(`https://exerciceintegre.firebaseio.com/Visiteur/${res.data}.json`)
+      .then(function (response) {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+});
 

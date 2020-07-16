@@ -5,18 +5,17 @@ let valueVisiteur = document.querySelector(".valueVisiteur");
 
 let qr = new QrcodeDecoder();
 qr.decodeFromCamera(video).then((res)=>{
-    console.log(res.data);
-    axios.get(`https://exerciceintegre.firebaseio.com/Visiteur/${res.data}.json`)
-      .then(function (response) {
-        valueVisiteur.innerHTML += `Bonjour , ${response.data.Prenom} ${response.data.Nom} `
-        console.log(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      })
-      .then(function () {
-        // always executed
-      }); 
+  axios.get(`https://exerciceintegre.firebaseio.com/Visiteur/${res.data}.json`)
+  .then(function (response) {
+    valueVisiteur.innerHTML += `Bonjour  ${response.data.Prenom} ${response.data.Nom}, Bonne journée dans le centre :D `
+    // console.log(response.data.Visite[0].Objet);
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  }); 
 })
 
 const videoParameter = { 
