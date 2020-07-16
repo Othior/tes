@@ -13,7 +13,7 @@
             <h1>Cepegra</h1>
             <h2 style="padding-top: 2rem;">Inscription</h2>
         </div>
-        <div class="container">
+        <div class="container yes">
             <div class="btnAcceuil text-center">
                 <a class="btn btn-warning btn-lg" href="../../index.html">Acceuil</a>
             </div>
@@ -30,6 +30,10 @@
                 <label for="mail">Mail:</label>
                 <input type="mail" class="form-control" id="mail" name="Mail">
               </div>
+              <div class="video">
+                <video id="video" autoplay></video>
+                <input type="button" class="btn btn-warning PrendrePhoto" value="prendre une photo">
+            </div>
               <div class="jumbotron bg-dark text-center text-warning">
                 <h2>Qu'elle est l'objet de votre visite ?</h2>
             </div> 
@@ -40,7 +44,6 @@
                     <option data-id="2">Rendez vous avec un membre du personnel</option>
                 </select>
             </div>
-               
             <div class="groupInput" style="padding-top: 2rem;">
                 <div class="formationBlock">
                     <select class="form-control" id="formation" name="formation">
@@ -51,11 +54,17 @@
                     </select>
                 </div>
             </div>
-                <div class="bouton text-center" style="padding-top: 1rem;">
-                    <input class=" btn btn-lg btn btn-warning btnSubmit" type="submit" value="Envoyer">
-                </div>
-                <div id="qrcode"></div>
+            <div class="bouton text-center" style="padding-top: 1rem;">
+                <input class=" btn btn-lg btn btn-warning btnSubmit" type="submit" value="Envoyer">
+            </div>
         </div>
+            <div class="container bg-dark text-center qrcodeBlock" style="margin-top: 3rem;">
+                <div class="text-warning text-center" style="padding-top: 2rem; padding-bottom:4rem ;">
+                    <h2>Voici votre QRCODE :</h2>
+                    <div id="qrcode"></div>
+                </div>
+            </div>
+            
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

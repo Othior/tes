@@ -1,13 +1,34 @@
-.formationBlock{
+.formationBlock,.personnelBlock{
     display: none;
 }
-.personnelBlock{
-    display: none;
-}
-.active{
+
+.active,.container{
     display: block;
 }
 #qrcode{
-    width: 400px;
-    height: 400px;
+    width: 256px;
+    height: 256px;
+    margin: auto; 
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+} 
+.enabled{
+    display: none;
+}
+.qrcodeBlock{
+    display: none;
+}
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+.PrendrePhoto{
+    margin-left: 1rem;
+}
+#video{
+    width: 200px;
+    height: 200px;
+    background-color: grey;
 }
