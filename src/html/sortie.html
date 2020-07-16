@@ -8,23 +8,28 @@
     <title>Sortie</title>
 </head>
 <body>
-    <div class="container-fluid bg-light" style="height: 100vh;">
+    <div class="container-fluid bg-light page">
         <div class="jumbotron bg-dark text-center text-warning">
             <h1>Cepegra</h1>
-            <h2 style="padding-top: 2rem;">Sortie</h2>
+            <h2 class="sortieTitle">Sortie</h2>
         </div>
         <div class="container text-center">
             <div>
                 <a class="btn btn-warning btn-lg" href="../../index.html">Acceuil</a>
             </div>
-            <div class="scan">
-                <video id="#video"></video>
+            <div class="jumbotron bg-dark text-warning scanBlock">
+                <h2>Scannez votre QRCode</h2>
+                <div class="valueVisiteur"></div>
+                <div class="scan">
+                    <video id="video" autoplay></video>
+                </div>
             </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../js/sortie.js"></script>
 </body>
 </html>
