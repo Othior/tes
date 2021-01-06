@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "parcel-bundler": "^1.12.4",
     "qrcode": "^1.4.4",
     "qrcode-decoder": "^0.1.2",
